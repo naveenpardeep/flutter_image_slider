@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_image_slider/photo_view_page.dart';
+import 'package:flutter_image_carousel_slider/photo_view_page.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 class ImageListView extends StatefulWidget {

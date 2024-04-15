@@ -1,9 +1,9 @@
 
-Flutter image slider 
+Flutter image carousel slider 
 
 ## Features
 
-Fast flutter image slider and smooth slides 
+Fast flutter image carousel slider and smooth slides 
 
 ## Getting started
 

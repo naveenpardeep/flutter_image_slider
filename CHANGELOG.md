@@ -1,3 +1,3 @@
 ## 0.0.1
 
-Cool flutter image slider 
+Cool flutter image carousel slider 
