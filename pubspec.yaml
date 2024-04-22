@@ -1,6 +1,6 @@
 name: flutter_image_carousel_slider
-description: Flutter image carousel slider for smooth slide.A carousel slider in Flutter is a UI widget used to display a series of items horizontally in a scrolling manner, typically with one item visible at a time. It allows users to swipe or scroll through the items, providing a visually appealing and interactive way to navigate content.              
-version: 0.0.4
+description: Flutter image carousel slider for smooth slide.A carousel slider in Flutter is a UI widget used to display a series of items horizontally in a scrolling manner.          
+version: 0.0.5
 homepage: https://github.com/naveenpardeep/flutter_image_slider
 
 environment:
