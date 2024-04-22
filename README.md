@@ -6,6 +6,9 @@ Flutter image carousel slider
 Fast flutter image carousel slider and smooth slides 
 
 ## Getting started
+A carousel slider in Flutter is a UI widget used to display a series of items horizontally in a scrolling manner, typically with one item visible at a time. It allows users to swipe or scroll through the items, providing a visually appealing and interactive way to navigate content.
+Image carousels, commonly referred to as sliders, are interactive elements on web pages that showcase multiple images or content pieces in a rotating sequence. Originating as simple photo sliders, their evolution has been influenced significantly by advancements in web technology.
+
 
 to use this package import the latest package and directly pass the images path 
 like this-->
