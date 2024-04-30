@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image_carousel_slider/image_carousel_slider.dart';
 import 'package:flutter_image_carousel_slider/list_image_view.dart';
-import 'package:flutter_image_carousel_slider/view_image.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +51,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               }));
             },
-            child: CardItemView(items: imageList),
+
+            ///user can add image height and dots color
+            child: ImageCarouselSlider(items: imageList),
           ),
         ));
   }
