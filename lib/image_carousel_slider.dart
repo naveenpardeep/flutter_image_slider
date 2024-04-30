@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CardItemView extends StatelessWidget {
-  const CardItemView({super.key, required this.items});
+class ImageCarouselSlider extends StatelessWidget {
   final List<String> items;
+  final Color? dotColor;
+  final double? imageHeight;
+  const ImageCarouselSlider(
+      {super.key, required this.items, this.dotColor, this.imageHeight});
 
   @override
   Widget build(BuildContext context) {
@@ -21,14 +24,16 @@ class CardItemView extends StatelessWidget {
 }
 
 class ImageSliderView extends StatefulWidget {
-  const ImageSliderView({
-    super.key,
-    this.imageHeight = 200.0,
-    required this.imagesPath,
-  });
   //get imageURLs
-  final double imageHeight; // or use aspect ratio
+
   final List<String> imagesPath;
+
+  final Color? dotColor;
+  // or use aspect ratio
+  final double? imageHeight;
+
+  const ImageSliderView(
+      {super.key, this.imageHeight, required this.imagesPath, this.dotColor});
 
   @override
   State<ImageSliderView> createState() => _ImageSliderViewState();
@@ -37,7 +42,7 @@ class ImageSliderView extends StatefulWidget {
 class _ImageSliderViewState extends State<ImageSliderView> {
   int _current = 0;
   final PageController _pageController = PageController();
-
+  double fiximageHeight = 200;
   @override
   void initState() {
     super.initState();
@@ -67,13 +72,14 @@ class _ImageSliderViewState extends State<ImageSliderView> {
             margin: const EdgeInsets.symmetric(horizontal: 4.0),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: _current == i ? Colors.blue : Colors.grey,
+              color:
+                  _current == i ? widget.dotColor ?? Colors.blue : Colors.grey,
             ),
           ),
       ],
     );
     return SizedBox(
-      height: widget.imageHeight,
+      height: widget.imageHeight ?? fiximageHeight,
       child: Stack(
         children: [
           Positioned.fill(
@@ -84,7 +90,8 @@ class _ImageSliderViewState extends State<ImageSliderView> {
                       borderRadius: BorderRadius.circular(20),
                       child: Image.network(
                         widget.imagesPath[index],
-                        fit: BoxFit.fill,
+                        alignment: Alignment.topCenter,
+                        fit: BoxFit.cover,
                       ),
                     )),
           ),

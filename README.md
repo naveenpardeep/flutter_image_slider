@@ -33,7 +33,12 @@ To show images in gallery view just use like this
                            
                           },
                           child:
-                              CardItemView(items:imageList),
+                              ImageCarouselSlider(items:imageList),
                         ),
 
 ![image](https://github.com/naveenpardeep/flutter_image_slider/assets/42085829/dcd4093a-95da-484c-89f8-757a65dd37f4)
+
+
+
+
+Any help or suggestion contact me naveensheoran1000@gmail.com or telegram @NaveenSheoran777
