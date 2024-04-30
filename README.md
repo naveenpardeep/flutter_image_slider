@@ -26,7 +26,7 @@ To show images in gallery view just use like this
                             Navigator.of(context)
                                 .push(MaterialPageRoute(builder: (context) {
                               return ImageListView(
-                                imageListed: imageList,
+                                imageList: imageList,
                               );
                             }));
                            

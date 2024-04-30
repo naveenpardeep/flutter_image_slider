@@ -3,8 +3,8 @@ import 'package:flutter_image_carousel_slider/photo_view_page.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 class ImageListView extends StatefulWidget {
-  final List<String> imageListed;
-  const ImageListView({super.key, required this.imageListed});
+  final List<String> imageList;
+  const ImageListView({super.key, required this.imageList});
 
   @override
   State<ImageListView> createState() => _ImageListViewState();
@@ -17,13 +17,13 @@ class _ImageListViewState extends State<ImageListView> {
       body: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount:
-                widget.imageListed.length == 1 || widget.imageListed.length == 2
+                widget.imageList.length == 1 || widget.imageList.length == 2
                     ? 1
                     : 2,
             mainAxisSpacing: MediaQuery.of(context).size.height * 0.01,
             crossAxisSpacing: MediaQuery.of(context).size.height * 0.01,
           ),
-          itemCount: widget.imageListed.length,
+          itemCount: widget.imageList.length,
           itemBuilder: (context, index) {
             return Container(
               decoration: const BoxDecoration(
@@ -48,14 +48,14 @@ class _ImageListViewState extends State<ImageListView> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => PhotoViewPage(
-                              images: [widget.imageListed[index]],
+                              images: [widget.imageList[index]],
                             )),
                   );
                 },
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image.network(
-                    widget.imageListed[index],
+                    widget.imageList[index],
                     fit: BoxFit.cover,
                     alignment: Alignment.topCenter,
                   ),

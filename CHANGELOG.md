@@ -9,7 +9,7 @@ example added
 ## 0.0.3
 new image list view added
                ImageListView(
-                            imageListed: imageList,
+                            imageList: imageList,
                           );   
 ## 0.0.2
 

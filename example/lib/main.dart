@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return ImageListView(
-                  imageListed: imageList,
+                  imageList: imageList,
                 );
               }));
             },
