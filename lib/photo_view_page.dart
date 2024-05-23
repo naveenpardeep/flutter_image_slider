@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 
 class PhotoViewPage extends StatefulWidget {
+  // images path
   final List<String> images;
+  // by default photo
   final String? title;
+  // index 0
   final int index;
   const PhotoViewPage({
     Key? key,
@@ -44,6 +47,7 @@ class _PhotoViewPageState extends State<PhotoViewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // we can show photo and zoom in and zoom out
       body: PageView(
         controller: _pageController,
         children: _images.map((image) {

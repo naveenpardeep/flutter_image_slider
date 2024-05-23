@@ -3,6 +3,7 @@ import 'package:flutter_image_carousel_slider/photo_view_page.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 class ImageListView extends StatefulWidget {
+  // images path
   final List<String> imageList;
   const ImageListView({super.key, required this.imageList});
 
@@ -16,6 +17,7 @@ class _ImageListViewState extends State<ImageListView> {
     return Scaffold(
       body: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            // show images in grid view
             crossAxisCount:
                 widget.imageList.length == 1 || widget.imageList.length == 2
                     ? 1

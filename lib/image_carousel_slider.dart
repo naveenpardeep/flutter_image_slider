@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ImageCarouselSlider extends StatelessWidget {
+  /// images path
   final List<String> items;
+
+  /// user can set dot indicator color
   final Color? dotColor;
+  //  by default height 200
   final double? imageHeight;
   const ImageCarouselSlider(
       {super.key, required this.items, this.dotColor, this.imageHeight});
@@ -12,7 +16,7 @@ class ImageCarouselSlider extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          //imagePArt here
+          //imagePart here
           ImageSliderView(
             imagesPath: items,
           ),
@@ -25,9 +29,8 @@ class ImageCarouselSlider extends StatelessWidget {
 
 class ImageSliderView extends StatefulWidget {
   //get imageURLs
-
   final List<String> imagesPath;
-
+// dot indicator color
   final Color? dotColor;
   // or use aspect ratio
   final double? imageHeight;
@@ -40,8 +43,10 @@ class ImageSliderView extends StatefulWidget {
 }
 
 class _ImageSliderViewState extends State<ImageSliderView> {
+  // current index 0
   int _current = 0;
   final PageController _pageController = PageController();
+  // by default height set to 200
   double fiximageHeight = 200;
   @override
   void initState() {
@@ -79,6 +84,7 @@ class _ImageSliderViewState extends State<ImageSliderView> {
       ],
     );
     return SizedBox(
+      // here if height null then by default 200
       height: widget.imageHeight ?? fiximageHeight,
       child: Stack(
         children: [
