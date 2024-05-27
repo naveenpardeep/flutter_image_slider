@@ -1,6 +1,6 @@
 name: flutter_image_carousel_slider
 description: Flutter image carousel slider for smooth slide.A carousel slider in Flutter is a UI widget used to display a series of items horizontally in a scrolling manner.          
-version: 0.0.13
+version: 0.0.14
 homepage: https://github.com/naveenpardeep/flutter_image_slider
 
 environment:
@@ -8,7 +8,6 @@ environment:
   flutter: ">=1.17.0" 
 
 dependencies:
-  cached_network_image: ^3.3.1
   flutter:
     sdk: flutter
   gradient_borders: ^1.0.0

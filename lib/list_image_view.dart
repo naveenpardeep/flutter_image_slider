@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_image_carousel_slider/photo_view_page.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 class ImageListView extends StatefulWidget {
@@ -44,23 +43,12 @@ class _ImageListViewState extends State<ImageListView> {
                   Radius.circular(20),
                 ),
               ),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => PhotoViewPage(
-                              images: [widget.imageList[index]],
-                            )),
-                  );
-                },
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.network(
-                    widget.imageList[index],
-                    fit: BoxFit.cover,
-                    alignment: Alignment.topCenter,
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.network(
+                  widget.imageList[index],
+                  fit: BoxFit.cover,
+                  alignment: Alignment.topCenter,
                 ),
               ),
             );
