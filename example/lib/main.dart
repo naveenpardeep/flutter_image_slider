@@ -33,7 +33,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<String> imageList = [];
+  List<String> imageList = [
+    "https://thumbs.dreamstime.com/z/luxury-yacht-mediteranean-sea-sardinia-26104031.jpg?ct=jpeg",
+    "https://thumbs.dreamstime.com/z/luxury-yacht-sea-26613003.jpg?ct=jpeg",
+    "https://thumbs.dreamstime.com/z/speed-boat-5750774.jpg?ct=jpeg",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -43,17 +47,26 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Center(
-          child: InkWell(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return ImageListView(
-                  imageList: imageList,
-                );
-              }));
-            },
+          child: Column(
+            children: [
+              InkWell(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return ImageListView(
+                      imageList: imageList,
+                    );
+                  }));
+                },
 
-            ///user can add image height and dots color
-            child: ImageCarouselSlider(items: imageList),
+                ///user can add image height and dots color
+                child: ImageCarouselSlider(
+                  items: imageList,
+                  imageHeight: 300,
+                  dotColor: Colors.black,
+                ),
+              ),
+            ],
           ),
         ));
   }

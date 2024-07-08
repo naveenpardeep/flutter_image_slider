@@ -1,3 +1,5 @@
+## 0.0.15
+image height and dots color example added
 ## 0.0.7
 example updated
 ## 0.0.6

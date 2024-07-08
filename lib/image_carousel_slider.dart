@@ -8,8 +8,13 @@ class ImageCarouselSlider extends StatelessWidget {
   final Color? dotColor;
   //  by default height 200
   final double? imageHeight;
-  const ImageCarouselSlider(
-      {super.key, required this.items, this.dotColor, this.imageHeight});
+
+  const ImageCarouselSlider({
+    super.key,
+    required this.items,
+    this.dotColor,
+    this.imageHeight,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +23,8 @@ class ImageCarouselSlider extends StatelessWidget {
         children: [
           //imagePart here
           ImageSliderView(
+            imageHeight: imageHeight,
+            dotColor: dotColor,
             imagesPath: items,
           ),
           const SizedBox(height: 10),
@@ -35,8 +42,12 @@ class ImageSliderView extends StatefulWidget {
   // or use aspect ratio
   final double? imageHeight;
 
-  const ImageSliderView(
-      {super.key, this.imageHeight, required this.imagesPath, this.dotColor});
+  const ImageSliderView({
+    super.key,
+    this.imageHeight,
+    required this.imagesPath,
+    this.dotColor,
+  });
 
   @override
   State<ImageSliderView> createState() => _ImageSliderViewState();
