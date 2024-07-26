@@ -1,3 +1,5 @@
+## 2.0.0
+ImageCarouselSliderLeftRightShow added
 ## 0.0.15
 image height and dots color example added
 ## 0.0.7

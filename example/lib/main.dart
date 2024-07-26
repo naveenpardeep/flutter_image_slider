@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_carousel_slider/image_carousel_slider.dart';
+import 'package:flutter_image_carousel_slider/image_carousel_slider_left_right_show.dart';
 import 'package:flutter_image_carousel_slider/list_image_view.dart';
 
 void main() {
@@ -61,6 +62,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 ///user can add image height and dots color
                 child: ImageCarouselSlider(
+                  items: imageList,
+                  imageHeight: 300,
+                  dotColor: Colors.black,
+                ),
+              ),
+
+              /// To show image carousel left right viewportFraction
+              InkWell(
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return ImageListView(
+                      imageList: imageList,
+                    );
+                  }));
+                },
+
+                ///user can add image height and dots color
+                child: ImageCarouselSliderLeftRightShow(
                   items: imageList,
                   imageHeight: 300,
                   dotColor: Colors.black,
