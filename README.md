@@ -64,4 +64,16 @@ To show images in gallery view just use like this
   ![image](https://github.com/user-attachments/assets/b24b333a-dad6-4ee1-a35b-aaf9de0da4d3)            
 
 
+for Asset image
+              AssetImageCarouselSliderLeftRightShow(
+                  items: imageList,
+                  imageHeight: 300,
+                  dotColor: Colors.black,
+                ),
+
+               AssetImageCarouselSlider(
+                  items: imageList,
+                  imageHeight: 300,
+                  dotColor: Colors.black,
+                ),
 Any help or suggestion contact me naveensheoran1000@gmail.com or telegram @NaveenSheoran777

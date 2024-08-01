@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image_carousel_slider/asset_image_carousel_slider.dart';
 import 'package:flutter_image_carousel_slider/image_carousel_slider.dart';
 import 'package:flutter_image_carousel_slider/image_carousel_slider_left_right_show.dart';
 import 'package:flutter_image_carousel_slider/list_image_view.dart';

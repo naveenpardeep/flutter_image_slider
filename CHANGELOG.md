@@ -1,3 +1,5 @@
+## 2.0.1
+AssetImageCarouselSlider() added,
 ## 2.0.0
 ImageCarouselSliderLeftRightShow added
 ## 0.0.15
